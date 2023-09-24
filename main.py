@@ -12,6 +12,10 @@ class Task:
         self.title = title
         self.description = description
 
+@app.get("/")
+async def inicio():
+    return {"bienvenido":"primer api con fast", "cursos":["python", "ruby", "css", "html", "ruby on rails", "fast-api", "flask", "bootstrap", "git"]}
+
 # Ruta para obtener todas las tareas
 @app.get("/tasks/")
 async def get_tasks():
